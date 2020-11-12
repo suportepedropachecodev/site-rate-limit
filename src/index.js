@@ -14,7 +14,7 @@ const rateLimitMiddleware = rateLimit({
 app.use(morgan('combined'))
  
 app.get('/',rateLimitMiddleware, function (req, res) {
-  res.send('Acesso Permitido')
+  res.send('Acesso Permitido!')
 })
 
 app.listen(3000,() => {
