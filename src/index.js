@@ -17,7 +17,7 @@ app.get('/',rateLimitMiddleware, function (req, res) {
   res.send('Acesso Permitido!')
 })
 
-app.listen(30015,() => {
+app.listen( process.env.PORT || 30015,() => {
   console.debug('App funcionando na porta :30015')
 });
 //app.use(rateLimitMiddleware);
